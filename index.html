@@ -3,10 +3,10 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>WhaleLLC</title>
+
 		<link rel="stylesheet" href="style.css" />
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="js/typed.js"></script>
-		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- отправка на почту -->
 <script>
     function AjaxFormRequest2(result2_id,formMain2,url2) {
@@ -45,7 +45,7 @@
 			<div class="logo"><img src="http://vvhale.com.ua/img/logo.png"></div>
 		</header>
 		<section id="who-are-you">
-			<h1>Кто Вы или чем занимаетесь?</h1>
+			<h1><span>Кто Вы или чем занимаетесь?<span></h1>
 			<div class="circles">
 				<span>1</span>
 				<span>2</span>
@@ -54,7 +54,7 @@
 			</div>
 		</section>
 		<section id="services">
-			<h1><span class="typed-cursor">|</span></h1>
+			<h1></h1>
 			<h1>Вот что мы можем Вам предложить ...</h1>
 			<img src="img/lp2.png">
 		</section>
@@ -111,14 +111,15 @@ $(".circles span").click(function(){
 </script>
 	<!-- ПЕЧАТЬ -->
 <script>
-	setTimeout(function()
+//Печатание текста ^1500 - это задержка
+setTimeout(function()
 {
 
     $(function(){
 
-        $("#services > h1").typed({
-            strings: ["Выберете сферу деятельности которая к вам относился?"],
-            typeSpeed: 20,
+        $("#who-are-you h1 > span").typed({
+            strings: ["Кто Вы или чем занимаетесь?"],
+            typeSpeed: 30,
 			startDelay: 0,
             backDelay: 500,
             loop: false,
@@ -140,7 +141,7 @@ $(".circles span").click(function(){
     function foo(){ console.log("Callback"); }
 
 }
-,500);
+,0);
 </script>
 	</body>
 </html>
