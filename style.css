@@ -10,8 +10,20 @@
 
 
 /* стили блока с формой и контактами */
+
+/* блок затемения экрана для формы */
+#dark{
+cursor: pointer;
+display: none;
+position: fixed;
+top: 0px;
+left: 0px;
+height: 100vh;
+width: 100%;
+}
+
 #contactbox{
-/*display: none;*/
+display: none;
 position: fixed;
 z-index: 99999;
 top: 50%;

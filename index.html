@@ -4,6 +4,36 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>WhaleLLC</title>
 		<link rel="stylesheet" href="style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>		
+<!-- отправка на почту -->
+<script>
+    function AjaxFormRequest2(result2_id,formMain2,url2) {
+                jQuery.ajax({
+                    url:     url2,
+                    type:     "POST",
+                    dataType: "html",
+                    data: jQuery("#"+formMain2).serialize(), 
+                    success: function(response2) {
+                    document.getElementById(result2_id).innerHTML = response2;
+					setTimeout(function()
+							{
+					$( "#dark" ).click();
+					
+							},500);					
+                },
+                error: function(response2) {
+                document.getElementById(result2_id).innerHTML = "<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>";
+                }
+             });
+
+             $(':input','#formMain2')
+ 				.not(':button, :submit, :reset, :hidden')
+ 				.val('')
+ 				.removeAttr('checked')
+ 				.removeAttr('selected');
+    }
+</script>		
+		
 	</head>
 	<body>
 
@@ -45,13 +75,14 @@
 	</form>
 </div>
 <script>
-$("").click(function(){
-	$("").fadeIn(800);
+$(".contact button").click(function(){
+	$("#contactbox").fadeIn(800);
+		$("#dark").fadeIn(500);
 });
 
 $("#dark").click(function(){
 	(this).fadeOut(800);
-	$("").fadeOut(500);
+		$("#contactbox").fadeOut(500);
 });
 </script>
 	</body>
