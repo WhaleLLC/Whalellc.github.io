@@ -4,6 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>WhaleLLC</title>
 		<link rel="stylesheet" href="style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>	
+		<script type="text/javascript" src="js/typed.js"></script>		
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- отправка на почту -->
 <script>
@@ -52,6 +54,7 @@
 			</div>
 		</section>
 		<section id="services">
+			<h1><span class="typed-cursor">|</span></h1>
 			<h1>Вот что мы можем Вам предложить ...</h1>
 			<img src="img/lp2.png">
 		</section>
@@ -88,6 +91,7 @@
 	</form>
 </div>
 <div id="dark"></div>
+	<!-- ПОЯВЛЕНИЕ ФОРМЫ И КОНТАКТОВ -->
 <script>
 $(".contacts button").click(function(){
 	$("#contactbox").fadeIn(800);
@@ -104,6 +108,39 @@ $(".circles span").click(function(){
 	$("#who-are-you").fadeOut(800);
 	$("#services").fadeIn(800);
 })
+</script>
+	<!-- ПЕЧАТЬ -->
+<script>	
+	setTimeout(function()
+{
+
+    $(function(){
+
+        $("#services > h1").typed({
+            strings: ["Выберете сферу деятельности которая к вам относился?"],
+            typeSpeed: 20,
+			startDelay: 0,
+            backDelay: 500,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+	
+}
+,500);	
 </script>
 	</body>
 </html>
