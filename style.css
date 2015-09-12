@@ -9,6 +9,7 @@
 
 
 
+
 /* стили блока с формой и контактами */
 
 /* блок затемения экрана для формы */
@@ -21,6 +22,9 @@ left: 0px;
 height: 100vh;
 width: 100%;
 }
+
+
+/* Стили блока с формой и контактами */
 
 #contactbox{
 display: none;
@@ -59,7 +63,7 @@ text-align: center;
     font-weight: 900;
     color: white;
     margin-top: 50px;
-} 
+}
 
 #phoneimg{
 position: relative;
@@ -96,7 +100,6 @@ float: left;
 height: 1px;
 background: #293033;
 }
-
 
 #mailimg{
 position: relative;
@@ -196,6 +199,97 @@ text-align: center;
 .place:focus:-moz-placeholder           {font-size: 17px; line-height: 100px; transition: line-height 0.5s ease;}
 .place:focus:-ms-input-placeholder      {font-size: 17px; line-height: 100px; transition: line-height 0.5s ease;}
 
+/* END */
+
+body {
+	background: url(bg.png) no-repeat;
+	background-size: cover;
+}
+
+section {
+	padding-top: 120px;
+}
+
+header {
+	width: 100%;
+	height: 105px;
+	position: fixed;
+	padding: 50px 50px 0;
+	box-sizing: border-box;
+}
+
+header .logo {
+	display: inline-block;
+	height: 70px;
+}
+
+header .logo img {
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+}
+
+header .contacts {
+	float: right;
+	padding: 14px 0;
+}
+
+header .contacts button {
+	background: #27ae60;
+	color: #fff;
+
+	font-size: 16px;
+	border: none;
+	text-transform: uppercase;
+	display: inline-block;
+	letter-spacing: 0.1em;
+	line-height: 16px;
+	padding: 12px 15px;
+	height: 42px;
+	-webkit-border-radius: 50px;
+	-khtml-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	border-radius: 50px;
+	text-decoration: none;
+	margin: 0 10px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+
+	-webkit-transition: background-color 0.6s ease;
+	-moz-transition: background-color 0.6s ease;
+	-o-transition: background-color 0.6s ease;
+	transition: background-color 0.6s ease
+}
 
 
+header .contacts button:before {
+	content: '';
+	display: inline-block;
+	margin-right: 8px;
+	background: url('http://floating.in.ua/img/icons-sdcc8bc775d.png') no-repeat;
+	background-position: 0 -512px;
+	width: 16px;
+	height: 15px;
+}
 
+header .contacts button:hover {
+	background-color: #40DFFF;
+}
+
+h1 {
+	color: green;
+	text-transform: uppercase;
+}
+
+/* Who you are */
+section#who-are-you {
+
+}

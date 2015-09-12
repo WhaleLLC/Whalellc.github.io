@@ -36,12 +36,24 @@
 		
 	</head>
 	<body>
-
-		<div id="wrapper">
-			<div>
-				<h1 style="padding:100px;font-size:50px;text-align:center;">Hello world!</h1>
+		<header>
+			<div class="contacts">
+				<button>Есть вопросы?</button>
 			</div>
-		</div>
+			<div class="logo"><img src="http://vvhale.com.ua/img/logo.png"></div>
+		</header>
+		<section id="who-are-you">
+			<h1>Кто Вы или чем занимаетесь?</h1>
+			<div class="circles">
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+			</div>
+		</section>
+		<section id="services">
+			<h1>Вот что мы можем Вам предложить ...</h1>
+		</section>
 
 <!-- БЛОК С ФОРМОЙ ОТПАРВКИ И КОНТАКТАМИ -->
 <div id="contactbox">
@@ -64,7 +76,7 @@
 	</div>
 	<div class="barier"></div>
     <div id="messegeResult2" style="display: none;" >
-        <p> Отправьте заявку! </p>		
+        <p> Отправьте заявку! </p>
     </div>
 	<form  method="post" action="" id="formMain2" name="formMain2">
         <input id="name2" class="place"  type="text" name="name2" placeholder="Ваше имя и номер телефона?" maxlength="30" autocomplete="off" required/>
