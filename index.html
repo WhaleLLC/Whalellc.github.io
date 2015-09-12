@@ -86,15 +86,16 @@
         <input id="button" type="button"  value="Перезвоните мне!" onclick="AjaxFormRequest2('messegeResult2', 'formMain2', 'form2.php')"/>
 	</form>
 </div>
+<div id="dark"></div>
 <script>
 $(".contacts button").click(function(){
 	$("#contactbox").fadeIn(800);
-		$("#dark").fadeIn(500);
+	$("#dark").fadeIn(500);
 });
 
 $("#dark").click(function(){
-	(this).fadeOut(800);
-		$("#contactbox").fadeOut(500);
+	$(this).fadeOut(800);
+	$("#contactbox").fadeOut(500);
 });
 </script>
 	</body>
