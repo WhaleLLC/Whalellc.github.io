@@ -7,6 +7,182 @@
 	border: 0px;
 }
 
+/* Стили блока с формой и контактами */
+#contactbox{
+/*display: none;*/
+position: fixed;
+z-index: 99999;
+top: 50%;
+left: 50%;
+width: 540px;
+height: 425px;
+    margin-top: -260px;
+    margin-left: -270px;
+	background-color: #141719;
+-webkit-box-shadow: 0px 0px 19px 1px rgba(0,197,255,1);
+-moz-box-shadow: 0px 0px 19px 1px rgba(0,197,255,1);
+box-shadow: 0px 0px 19px 1px rgba(0,197,255,1);
+}
+
+#dark{
+cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+#contactbox h1{
+text-align: center;
+    width: 100%;
+    font-family: PragmaticaLightC;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    margin-top: 50px;
+}
+
+#phoneimg{
+position: relative;
+    float: left;
+    width: 10%;
+    min-height: 10px;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+
+#phonetxt{
+position: relative;
+    float: left;
+    width: 78%;
+    min-height: 10px;
+    margin-top: 8px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+#phonetxt p{
+font-family: PragmaticaLightC;
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.barier{
+width: 100%;
+float: left;
+height: 1px;
+background: #293033;
+}
+
+#mailimg{
+position: relative;
+    float: left;
+    width: 10%;
+    min-height: 10px;
+    margin-top: 9px;
+    margin-left: 30px;
+}
+
+
+#mailtxt{
+position: relative;
+    float: left;
+    width: 78%;
+    min-height: 10px;
+    margin-top: 8px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+#mailtxt p{
+font-family: PragmaticaLightC;
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/* фОРМА ОТПРАВКИ */
+#formMain2{
+position: static;
+width: 100%;
+min-height: 50px;
+float: left;
+}
+
+#name2{
+color: #00C5FF;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 25px;
+    width: 60%;
+    border-radius: 20px;
+    background-color: #141719;
+    border: 2px solid transparent;
+    -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+
+}
+
+#formMain2 > input:focus{
+outline: 0px solid #666; /* Параметры рамки */
+}
+
+#button{
+color: #A9A9A9;
+font-family: PragmaticaLightC;
+    font-weight: 100;
+    font-size: 16px;
+    cursor: pointer;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 29%;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid #A9A9A9;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    -khtml-transition: 0.5s ease-in-out;
+}
+
+#button:hover {
+color: #00C5FF;
+border: 2px solid #00C5FF;;
+}
+
+/* ПРЕШХОЛДЕР */
+.place{
+color: #00C5FF;
+font: 400 17px 'PT Sans', sans-serif;
+text-align: center;
+}
+
+
+.place::-webkit-input-placeholder       {font-size: 17px; line-height: 20px;  transition: line-height 0.5s ease;}
+.place::-moz-placeholder                {font-size: 17px; line-height: 20px;  transition: line-height 0.5s ease;}
+.place:-moz-placeholder                 {font-size: 17px; line-height: 20px;  transition: line-height 0.5s ease;}
+.place:-ms-input-placeholder            {font-size: 17px; line-height: 20px;  transition: line-height 0.5s ease;}
+.place:focus::-webkit-input-placeholder {font-size: 17px; line-height: 100px; transition: line-height 0.5s ease;}
+.place:focus::-moz-placeholder          {font-size: 17px; line-height: 100px; transition: line-height 0.5s ease;}
+.place:focus:-moz-placeholder           {font-size: 17px; line-height: 100px; transition: line-height 0.5s ease;}
+.place:focus:-ms-input-placeholder      {font-size: 17px; line-height: 100px; transition: line-height 0.5s ease;}
+
+/* END */
+
 body {
 	background: url(bg.png) no-repeat;
 	background-size: cover;
@@ -70,10 +246,11 @@ header .contacts button {
 	cursor: pointer;
 
 	-webkit-transition: background-color 0.6s ease;
-  -moz-transition: background-color 0.6s ease;
-  -o-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease
+	-moz-transition: background-color 0.6s ease;
+	-o-transition: background-color 0.6s ease;
+	transition: background-color 0.6s ease
 }
+
 
 header .contacts button:before {
 	content: '';
@@ -96,5 +273,5 @@ h1 {
 
 /* Who you are */
 section#who-are-you {
-	
+
 }
