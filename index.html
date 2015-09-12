@@ -13,5 +13,40 @@
 			</div>
 		</div>
 
+<!-- БЛОК С ФОРМОЙ ОТПАРВКИ И КОНТАКТАМИ -->
+<div id="contactbox">
+<h1>Звоните в любое время!</h1>
+<div id="phoneimg" >
+<img style="width: 100%; " src="http://vvhale.com.ua/img/phone.png"/>
+</div>
+
+<div id="phonetxt" >
+	<p><span style="color: #5B5B5B;">099</span> 353 37 11</p>
+	<p><span style="color: #5B5B5B;">096</span> 885 05 16</p>
+
+</div>
+<div class="barier"></div>
+
+
+<div id="mailimg" >
+<img style="width: 100%; " src="http://vvhale.com.ua/img/Mail.png"/>
+</div>
+
+<div id="mailtxt" >
+	<p>whalellc@gmail.com</p>
+</div>
+<div class="barier"></div>
+    <div id="messegeResult2" style="display: none;" >
+        <p> Отправьте заявку! </p>
+		
+    </div>
+<form  method="post" action="" id="formMain2" name="formMain2">
+        <input id="name2" class="place"  type="text" name="name2" placeholder="Ваше имя и номер телефона?" maxlength="30" autocomplete="off" required/>
+        <span style="display: none;"><input id="telephone2" class="place" type="Tel" name="telephone2" placeholder="Телефон,Skype,Viber,Whatsap" maxlength="30" autocomplete="off" required/>
+		<input id="email" class="place hideunput" type="Tel" name="email" placeholder="Ваш e-mail?" maxlength="30" autocomplete="off" required/>
+		<input id="mess" class="place hideunput" type="text" name="mess" placeholder="Ваш вопрос?" maxlength="30" autocomplete="off" required/></span>
+        <input id="button" type="button"  value="Перезвоните мне!" onclick="AjaxFormRequest2('messegeResult2', 'formMain2', 'form2.php')"/>
+</form>
+</div>
 	</body>
 </html>
