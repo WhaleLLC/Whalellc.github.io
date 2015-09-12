@@ -9,30 +9,28 @@
 		<script type="text/javascript" src="js/typed.js"></script>
 <!-- отправка на почту -->
 <script>
-    function AjaxFormRequest2(result2_id,formMain2,url2) {
-                jQuery.ajax({
-                    url:     url2,
-                    type:     "POST",
-                    dataType: "html",
-                    data: jQuery("#"+formMain2).serialize(),
-                    success: function(response2) {
-                    document.getElementById(result2_id).innerHTML = response2;
-					setTimeout(function()
-							{
-					$( "#dark" ).click();
+    function AjaxFormRequest(result_id,formMain,url) {
+      jQuery.ajax({
+        url:     url,
+        type:     "POST",
+        dataType: "html",
+        data: jQuery("#"+formMain).serialize(),
+        success: function(response){
+          $(result_id).html(response)
+					setTimeout(function(){
+						$("#dark").click();
+					},500);
+      	},
+        error: function(response) {
+					$(result_id).html("<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>")
+        }
+      });
 
-							},500);
-                },
-                error: function(response2) {
-                document.getElementById(result2_id).innerHTML = "<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>";
-                }
-             });
-
-             $(':input','#formMain2')
- 				.not(':button, :submit, :reset, :hidden')
- 				.val('')
- 				.removeAttr('checked')
- 				.removeAttr('selected');
+      $(':input','#formMain')
+			.not(':button, :submit, :reset, :hidden')
+			.val('')
+			.removeAttr('checked')
+			.removeAttr('selected');
     }
 </script>
 
@@ -79,15 +77,13 @@
 	<p>whalellc@gmail.com</p>
 	</div>
 	<div class="barier"></div>
-    <div id="messegeResult2" style="display: none;" >
+    <div id="messegeResult" style="display: none;" >
         <p> Отправьте заявку! </p>
     </div>
-	<form  method="post" action="" id="formMain2" name="formMain2">
-        <input id="name2" class="place"  type="text" name="name2" placeholder="Ваше имя и номер телефона?" maxlength="30" autocomplete="off" required/>
-        <span style="display: none;"><input id="telephone2" class="place" type="Tel" name="telephone2" placeholder="Телефон,Skype,Viber,Whatsap" maxlength="30" autocomplete="off" required/>
-		<input id="email" class="place hideunput" type="Tel" name="email" placeholder="Ваш e-mail?" maxlength="30" autocomplete="off" required/>
-		<input id="mess" class="place hideunput" type="text" name="mess" placeholder="Ваш вопрос?" maxlength="30" autocomplete="off" required/></span>
-        <input id="button" type="button"  value="Перезвоните мне!" onclick="AjaxFormRequest2('messegeResult2', 'formMain2', 'form2.php')"/>
+	<form  method="post" action="" id="formMain" name="formMain">
+        <input id="name" class="place" type="text" name="name" placeholder="Ваше имя" maxlength="30" autocomplete="off" required/>
+				<input id="phone" class="place" type="phone" name="phone" placeholder="Ваш телефон" maxlength="30" autocomplete="off" required/>
+        <input id="button" type="button"  value="Перезвоните мне!" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
 	</form>
 </div>
 <div id="dark"></div>

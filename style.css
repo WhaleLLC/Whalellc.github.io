@@ -171,7 +171,7 @@ font-family: PragmaticaLightC;
 }
 
 /* фОРМА ОТПРАВКИ */
-#formMain2{
+#formMain {
 position: static;
 width: 100%;
 min-height: 50px;
@@ -179,32 +179,33 @@ padding: 15px 0;
 float: left;
 }
 
-#name2{
-color: #00C5FF;
-    height: 50px;
-    margin-left: 18px;
-    width: 60%;
-    border-radius: 20px;
-    background-color: #141719;
-    border: 2px solid transparent;
-    -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
-
+#formMain #name,
+#formMain #phone {
+	color: #00C5FF;
+  height: 50px;
+  margin-left: 18px;
+  width: 147px;
+	font-size: 15px;
+  border-radius: 20px;
+  background-color: #141719;
+  border: 2px solid transparent;
+  -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
 }
 
-#formMain2 > input:focus{
-outline: 0px solid #666; /* Параметры рамки */
+#formMain > input:focus{
+	outline: 0px solid #666; /* Параметры рамки */
 }
 
-#button{
+#button {
 color: #A9A9A9;
 font-family: PragmaticaLightC;
     font-weight: 100;
     font-size: 16px;
     cursor: pointer;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 15px;
     width: 29%;
     border-radius: 20px;
     background-color: transparent;
