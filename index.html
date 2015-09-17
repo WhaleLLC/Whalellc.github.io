@@ -45,6 +45,7 @@
 
 		<section id="who-are-you">
 			<h1 style="padding-top: 100px;"><span></span></h1>
+			<button class="next">Узнать подробнее</button>
 			<h1><span><span></h1>
 			<div style="display: none;" class="circles">
 				<span><img class="icon" src="img/finance-and-business4.png"><p>Розничные продажи</p></span>
@@ -146,18 +147,12 @@ $(".circles span").click(function(){
 
 			},3500);
 			/* END */
-		setTimeout(function()
-		{
-		$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
-
-	},6500);
 
 
-		setTimeout(function()
-		{
 
-			$(function(){
 
+
+<<<<<<< HEAD
 				$("#who-are-you h1:eq(1) > span").typed({
 					strings: ["В какой сфере вы работаете?"],
 					typeSpeed: 15,
@@ -174,15 +169,9 @@ $(".circles span").click(function(){
 				$(".reset").click(function(){
 					$("#typed").typed('reset');
 				});
+=======
+>>>>>>> 1190cea5cbd712e8f1250422f86c0dc3d997fc9b
 
-			});
-
-			function newTyped(){ /* A new typed object */ }
-
-			function foo(){ console.log("Callback"); }
-
-		}
-		,5000);
 		/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
 			setTimeout(function()
 			{
@@ -191,16 +180,56 @@ $(".circles span").click(function(){
 			},7000);
 			/* END */
 
+			setTimeout(function()
+			{
+			$("#who-are-you .next").fadeIn(500);
+
+		},5000);
+
+	$("#who-are-you .next").click(nextClick)
+
+	function nextClick() {
+		$("#who-are-you .next").fadeOut(200)
+
+		$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
+
+
+		$(function(){
+
+			$("#who-are-you h1:eq(1) > span").typed({
+				strings: ["Кто Вы или чем занимаетесь?"],
+				typeSpeed: 15,
+				startDelay: 2000,
+				backDelay: 500,
+				loop: false,
+				contentType: 'html', // or text
+				// defaults to false for infinite loop
+				loopCount: false,
+				callback: function(){ foo(); },
+				resetCallback: function() { newTyped(); }
+			});
+
+			$(".reset").click(function(){
+				$("#typed").typed('reset');
+			});
+
+		});
+
+		function newTyped(){ /* A new typed object */ }
+
+		function foo(){ console.log("Callback"); }
 
 		setTimeout(function()
 		{
-		$(".circles").fadeIn(800);
-	},9000);
+			$(".circles").fadeIn(800);
+		},3500);
 
 		setTimeout(function()
 		{
-		$(".contacts > button").fadeIn(1500);
-	},10000);
+			$(".contacts > button").fadeIn(1500);
+		},4500);
+
+	}
 </script>
 <!-- END -->
 	</body>
