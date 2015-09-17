@@ -254,7 +254,7 @@ text-align: center;
 
 body {
 	background: url(img/bg.png) no-repeat;
-	background-size: cover;
+	background-size: inherit;
 	overflow: hidden;
 }
 
