@@ -110,13 +110,12 @@ $(".circles span").click(function(){
 </script>
 	<!-- ПОЯВЛЕНИЕ И ПЕЧАТЬ СРАЗУ ПОСЛЕ ЗАГРУЗКИ СТРАНИЦЫ -->
 <script>
-//Печатание текста ^1500 - это задержка
+	$(document).ready(function(){
+		//Печатание текста ^1500 - это задержка
 		$(".logo > img").fadeIn(700);
 
-		setTimeout(function()
-		{
+		setTimeout(function(){
 			$(function(){
-
 				$("#who-are-you h1:eq(0) > span").typed({
 					strings: ["Приведем от <span style='color:#27ae60'>100 новых клиентов</span> за неделю для вашего бизнеса<br> с помощью интернет-маркетинга!"],
 					typeSpeed: 15,
@@ -140,77 +139,66 @@ $(".circles span").click(function(){
 
 			function foo(){ console.log("Callback"); }
 		}, 1000);
-			/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
-			setTimeout(function()
-			{
-			$("#who-are-you h1:eq(0) .typed-cursor").css({'color' : 'transparent'});
 
-			},3500);
-			/* END */
+		/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
+		setTimeout(function()
+		{
+		$("#who-are-you h1:eq(0) .typed-cursor").css({'color' : 'transparent'});
 
-
-
-
+		},3500);
+		/* END */
 
 
 		/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
-			setTimeout(function()
-			{
+		setTimeout(function(){
 			$("#who-are-you h1:eq(1) .typed-cursor").css({'color' : 'transparent'});
+		},7000);
+		/* END */
 
-			},7000);
-			/* END */
+		setTimeout(function(){
+			$("#who-are-you > button").fadeIn(200);
+		},6500);
 
-			setTimeout(function()
-			{
-			$("#who-are-you .next").fadeIn(500);
+		$("#who-are-you .next").click(nextClick)
 
-		},5000);
+		function nextClick() {
+			$("#who-are-you > button").fadeOut(200)
 
-	$("#who-are-you .next").click(nextClick)
+			$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
+			$("#who-are-you h1:eq(0)").fadeOut(1000)
 
-	function nextClick() {
-		$("#who-are-you .next").fadeOut(200)
+			$(function(){
+				$("#who-are-you h1:eq(1) > span").typed({
+					strings: ["Кто Вы или чем занимаетесь?"],
+					typeSpeed: 15,
+					startDelay: 2000,
+					backDelay: 500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
 
-		$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
-
-
-		$(function(){
-
-			$("#who-are-you h1:eq(1) > span").typed({
-				strings: ["Кто Вы или чем занимаетесь?"],
-				typeSpeed: 15,
-				startDelay: 2000,
-				backDelay: 500,
-				loop: false,
-				contentType: 'html', // or text
-				// defaults to false for infinite loop
-				loopCount: false,
-				callback: function(){ foo(); },
-				resetCallback: function() { newTyped(); }
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
 			});
 
-			$(".reset").click(function(){
-				$("#typed").typed('reset');
-			});
+			function newTyped(){ /* A new typed object */ }
 
-		});
+			function foo(){ console.log("Callback"); }
 
-		function newTyped(){ /* A new typed object */ }
+			setTimeout(function(){
+				$(".circles").fadeIn(800);
+			},3500);
 
-		function foo(){ console.log("Callback"); }
-
-		setTimeout(function()
-		{
-			$(".circles").fadeIn(800);
-		},3500);
-
-		setTimeout(function()
-		{
-			$(".contacts > button").fadeIn(1500);
-		},4500);
-
-	}
+			setTimeout(function(){
+				$(".contacts > button").fadeIn(1000);
+			},4500);
+		}
+	})
 </script>
 <!-- END -->
 	</body>
