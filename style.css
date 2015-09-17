@@ -3,11 +3,21 @@
     font-family: roboto-regular; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/roboto-regular.ttf); /* Путь к файлу со шрифтом */
    }
-   
-      
+
       @font-face {
     font-family:  PragmaticaLightC; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/PragmaticaLightC.otf); /* Путь к файлу со шрифтом */
+   }
+
+   @font-face {
+    font-family: Myriad-Pro-Semibold-Condensed; /* Имя шрифта */
+    src: url(http://vvhale.com.ua/fonts/Myriad-Pro-Semibold-Condensed.ttf); /* Путь к файлу со шрифтом */
+   }
+
+
+   @font-face {
+    font-family: MyriadPro-BoldCond; /* Имя шрифта */
+    src: url(http://vvhale.com.ua/fonts/MyriadPro-BoldCond.otf); /* Путь к файлу со шрифтом */
    }
 /* обнуление */
 
@@ -22,17 +32,17 @@
 
         /* code for animated blinking cursor */
         .typed-cursor{
-		color: #b8deff;
+color: inherit;
     text-align: left;
-    font-family:  PragmaticaLightC;
-    font-size: 58px;
+    font-family: PragmaticaLightC;
+    font-size: inherit;
     font-weight: 100;
-            opacity: 1;
-            -webkit-animation: blink 0.7s infinite;
-            -moz-animation: blink 0.7s infinite;
-            -ms-animation: blink 0.7s infinite;
-            -o-animation: blink 0.7s infinite;
-            animation: blink 0.7s infinite;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
         }
         @-keyframes blink{
             0% { opacity:1; }
@@ -347,7 +357,8 @@ h1 {
 	color: #ccc;
 	text-transform: uppercase;
 	margin-bottom: 50px;
-	font-family: roboto-regular;
+	font-size: 40px;
+	font-family: MyriadPro-BoldCond;
 }
 /* Who we are */
 #who-are-we{
@@ -359,23 +370,40 @@ h1 {
 	display: block;
 }
 
+#who-are-you .circles {
+
+}
+
 #who-are-you .circles span {
-	padding: 20px;
 	display: inline-block;
-	border-radius: 50%;
-	background-color: #fff;
+	vertical-align: top;
+	border-radius: 15%;
 	font-weight: bold;
-	margin: 20px;
-	width: 20px;
+	color: #fff;
+	padding: 10px;
+	margin: 10px;
+	width: 140px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	box-sizing: border-box;
 	cursor: pointer;
 }
 
 #who-are-you .circles span:hover {
 	opacity: .8;
+	box-shadow: 0 0 110px -28px #000;
+}
+
+#who-are-you .circles span .icon {
+	display: block;
+	width: 80%;
+	margin: 0 auto 30px;
+}
+
+#who-are-you .circles span p {
+
 }
 
 /* Services */
