@@ -117,10 +117,10 @@ $(".circles span").click(function(){
 			$(function(){
 
 				$("#who-are-you h1:eq(0) > span").typed({
-					strings: ["Приведем новых клиентов для вашего бизнеса!"],
+					strings: ["Приведем от <span style='color:#27ae60'>100 новых клиентов</span> за неделю для вашего бизнеса<br> с помощью интернет-маркетинга!"],
 					typeSpeed: 15,
 					startDelay: 0,
-					backDelay: 500,
+					backDelay: 6500,
 					loop: false,
 					contentType: 'html', // or text
 					// defaults to false for infinite loop
@@ -150,7 +150,7 @@ $(".circles span").click(function(){
 		{
 		$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
 
-		},4000);
+	},6500);
 
 
 		setTimeout(function()
@@ -161,7 +161,7 @@ $(".circles span").click(function(){
 				$("#who-are-you h1:eq(1) > span").typed({
 					strings: ["В какой сфере вы работаете?"],
 					typeSpeed: 15,
-					startDelay: 0,
+					startDelay: 2000,
 					backDelay: 500,
 					loop: false,
 					contentType: 'html', // or text
@@ -195,12 +195,12 @@ $(".circles span").click(function(){
 		setTimeout(function()
 		{
 		$(".circles").fadeIn(800);
-		},7500);
+	},9000);
 
 		setTimeout(function()
 		{
 		$(".contacts > button").fadeIn(1500);
-		},8500);
+	},10000);
 </script>
 <!-- END -->
 	</body>
