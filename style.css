@@ -3,11 +3,21 @@
     font-family: roboto-regular; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/roboto-regular.ttf); /* Путь к файлу со шрифтом */
    }
-   
       
       @font-face {
     font-family:  PragmaticaLightC; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/PragmaticaLightC.otf); /* Путь к файлу со шрифтом */
+   }
+   
+   @font-face {
+    font-family: Myriad-Pro-Semibold-Condensed; /* Имя шрифта */
+    src: url(http://vvhale.com.ua/fonts/Myriad-Pro-Semibold-Condensed.ttf); /* Путь к файлу со шрифтом */
+   }
+   
+   
+   @font-face {
+    font-family: MyriadPro-BoldCond; /* Имя шрифта */
+    src: url(http://vvhale.com.ua/fonts/MyriadPro-BoldCond.otf); /* Путь к файлу со шрифтом */
    }
 /* обнуление */
 
@@ -22,17 +32,17 @@
 
         /* code for animated blinking cursor */
         .typed-cursor{
-		color: #b8deff;
+color: inherit;
     text-align: left;
-    font-family:  PragmaticaLightC;
-    font-size: 58px;
+    font-family: PragmaticaLightC;
+    font-size: inherit;
     font-weight: 100;
-            opacity: 1;
-            -webkit-animation: blink 0.7s infinite;
-            -moz-animation: blink 0.7s infinite;
-            -ms-animation: blink 0.7s infinite;
-            -o-animation: blink 0.7s infinite;
-            animation: blink 0.7s infinite;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
         }
         @-keyframes blink{
             0% { opacity:1; }
@@ -347,7 +357,8 @@ h1 {
 	color: #ccc;
 	text-transform: uppercase;
 	margin-bottom: 50px;
-	font-family: roboto-regular;
+	font-size: 40px;
+	font-family: MyriadPro-BoldCond;
 }
 /* Who we are */
 #who-are-we{

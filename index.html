@@ -38,15 +38,15 @@
 	<body>
 		<header>
 			<div class="contacts">
-				<button>Есть вопросы?</button>
+				<button style="display: none;">Есть вопросы?</button>
 			</div>
-			<div class="logo"><img src="http://vvhale.com.ua/img/logo.png"></div>
+			<div class="logo"><img style="display: none;" src="http://vvhale.com.ua/img/logo.png"></div>
 		</header>
 				
 		<section id="who-are-you">
-			<h1>Приведем новых клиентов для вашего бизнеса</h1>
-			<h1><span>Кто Вы или чем занимаетесь?<span></h1>
-			<div class="circles">
+			<h1 style="padding-top: 100px;"><span></span></h1>
+			<h1><span><span></h1>
+			<div style="display: none;" class="circles">
 				<span>1</span>
 				<span>2</span>
 				<span>3</span>
@@ -89,7 +89,7 @@
 	</form>
 </div>
 <div id="dark"></div>
-	<!-- ПОЯВЛЕНИЕ ФОРМЫ И КОНТАКТОВ -->
+	<!-- ПОЯВЛЕНИЕ ФОРМЫ И КОНТАКТОВ + ВЫБОР -->
 <script>
 $(".contacts button").click(function(){
 	$("#contactbox").fadeIn(400);
@@ -107,39 +107,101 @@ $(".circles span").click(function(){
 	$("#services").fadeIn(800);
 })
 </script>
-	<!-- ПЕЧАТЬ -->
+	<!-- ПОЯВЛЕНИЕ И ПЕЧАТЬ СРАЗУ ПОСЛЕ ЗАГРУЗКИ СТРАНИЦЫ -->
 <script>
 //Печатание текста ^1500 - это задержка
-setTimeout(function()
-{
+		$(".logo > img").fadeIn(700);
 
-    $(function(){
+		setTimeout(function()
+		{
+			$(function(){
 
-        $("#who-are-you h1 > span").typed({
-            strings: ["Кто Вы или чем занимаетесь?"],
-            typeSpeed: 30,
-			startDelay: 0,
-            backDelay: 500,
-            loop: false,
-            contentType: 'html', // or text
-            // defaults to false for infinite loop
-            loopCount: false,
-            callback: function(){ foo(); },
-            resetCallback: function() { newTyped(); }
-        });
+				$("#who-are-you h1:eq(0) > span").typed({
+					strings: ["Приведем новых клиентов для вашего бизнеса!"],
+					typeSpeed: 15,
+					startDelay: 0,
+					backDelay: 500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
 
-        $(".reset").click(function(){
-            $("#typed").typed('reset');
-        });
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
 
-    });
+			});
 
-    function newTyped(){ /* A new typed object */ }
+			function newTyped(){ /* A new typed object */ }
 
-    function foo(){ console.log("Callback"); }
+			function foo(){ console.log("Callback"); }
+		}, 1000);
+			/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
+			setTimeout(function()
+			{
+			$("#who-are-you h1:eq(0) .typed-cursor").css({'color' : 'transparent'});
 
-}
-,0);
+			},3500);
+			/* END */
+		setTimeout(function()
+		{
+		$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
+
+		},4000);
+
+
+		setTimeout(function()
+		{
+
+			$(function(){
+
+				$("#who-are-you h1:eq(1) > span").typed({
+					strings: ["Кто Вы или чем занимаетесь?"],
+					typeSpeed: 15,
+					startDelay: 0,
+					backDelay: 500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+
+			function newTyped(){ /* A new typed object */ }
+
+			function foo(){ console.log("Callback"); }
+
+		}
+		,5000);
+		/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
+			setTimeout(function()
+			{
+			$("#who-are-you h1:eq(1) .typed-cursor").css({'color' : 'transparent'});
+
+			},7000);
+			/* END */
+
+
+		setTimeout(function()
+		{
+		$(".circles").fadeIn(800);
+		},7500);
+
+		setTimeout(function()
+		{
+		$(".contacts > button").fadeIn(1500);
+		},8500);
 </script>
+<!-- END -->
 	</body>
 </html>
