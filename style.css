@@ -13,8 +13,7 @@
     font-family: Myriad-Pro-Semibold-Condensed; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/Myriad-Pro-Semibold-Condensed.ttf); /* Путь к файлу со шрифтом */
    }
-
-
+	
    @font-face {
     font-family: MyriadPro-BoldCond; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/MyriadPro-BoldCond.otf); /* Путь к файлу со шрифтом */
