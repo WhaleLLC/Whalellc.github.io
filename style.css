@@ -13,7 +13,7 @@
     font-family: Myriad-Pro-Semibold-Condensed; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/Myriad-Pro-Semibold-Condensed.ttf); /* Путь к файлу со шрифтом */
    }
-	
+
    @font-face {
     font-family: MyriadPro-BoldCond; /* Имя шрифта */
     src: url(http://vvhale.com.ua/fonts/MyriadPro-BoldCond.otf); /* Путь к файлу со шрифтом */
@@ -263,7 +263,7 @@ text-align: center;
 
 body {
 	background: url(img/bg.png) no-repeat;
-	background-size: inherit;
+	background-size: cover;
 	overflow: hidden;
 }
 
@@ -381,7 +381,7 @@ h1 {
 	color: #fff;
 	padding: 10px;
 	margin: 10px;
-	width: 140px;
+	width: 190px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
@@ -397,12 +397,13 @@ h1 {
 
 #who-are-you .circles span .icon {
 	display: block;
-	width: 80%;
+	width: 50%;
 	margin: 0 auto 30px;
 }
 
 #who-are-you .circles span p {
-
+	font-size: 20px;
+	font-family: MyriadPro-BoldCond;
 }
 
 /* Services */
