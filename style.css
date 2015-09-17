@@ -337,6 +337,10 @@ h1 {
 	text-transform: uppercase;
 	margin-bottom: 50px;
 }
+/* Who we are */
+#who-are-we{
+	display: block;
+}
 
 /* Who you are */
 #who-are-you {
