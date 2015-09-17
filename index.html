@@ -45,7 +45,7 @@
 
 		<section id="who-are-you">
 			<h1 style="padding-top: 100px;"><span></span></h1>
-			<button class="next">Узнать подробнее</button>
+			<div id="buttonhide" style="display:none;"><button class="next">Узнать подробнее</button></div>
 			<h1><span><span></h1>
 			<div style="display: none;" class="circles">
 				<span><img class="icon" src="img/finance-and-business4.png"><p>Розничные продажи</p></span>
@@ -139,16 +139,12 @@ $(".circles span").click(function(){
 
 			function foo(){ console.log("Callback"); }
 		}, 1000);
-
-		/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
-		setTimeout(function()
-		{
-		$("#who-are-you h1:eq(0) .typed-cursor").css({'color' : 'transparent'});
-
-		},3500);
+				/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
+		setTimeout(function(){
+			$("#who-are-you h1:eq(0) .typed-cursor").css({'color' : 'transparent'});
+		},5500);
 		/* END */
-
-
+		
 		/* УБИРАЕМ МИГАЮЩИЙ КУРСОР */
 		setTimeout(function(){
 			$("#who-are-you h1:eq(1) .typed-cursor").css({'color' : 'transparent'});
@@ -156,13 +152,13 @@ $(".circles span").click(function(){
 		/* END */
 
 		setTimeout(function(){
-			$("#who-are-you > button").fadeIn(200);
+			$("#who-are-you #buttonhide").fadeIn(200);
 		},6500);
 
 		$("#who-are-you .next").click(nextClick)
 
 		function nextClick() {
-			$("#who-are-you > button").fadeOut(200)
+			$("#who-are-you #buttonhide").fadeOut(1000)
 
 			$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
 			$("#who-are-you h1:eq(0)").fadeOut(1000)
