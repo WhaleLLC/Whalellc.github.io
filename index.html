@@ -167,23 +167,25 @@ $(".circles span").click(function(){
 			$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
 			$("#who-are-you h1:eq(0)").fadeOut(1000)
 
-			$(function(){
-				$("#who-are-you h1:eq(1) > span").typed({
-					strings: ["В какой сфере Вы работаете?"],
-					typeSpeed: 15,
-					startDelay: 2000,
-					backDelay: 500,
-					loop: false,
-					contentType: 'html', // or text
-					// defaults to false for infinite loop
-					loopCount: false,
-					callback: function(){ foo(); },
-					resetCallback: function() { newTyped(); }
-				});
+			setTimeout(function () {
+				$(function(){
+					$("#who-are-you h1:eq(1) > span").typed({
+						strings: ["В какой сфере Вы работаете?"],
+						typeSpeed: 15,
+						startDelay: 0,
+						backDelay: 500,
+						loop: false,
+						contentType: 'html', // or text
+						// defaults to false for infinite loop
+						loopCount: false,
+						callback: function(){ foo(); },
+						resetCallback: function() { newTyped(); }
+					})
+				})
+			}, 2000);
 
-				$(".reset").click(function(){
-					$("#typed").typed('reset');
-				});
+			$(".reset").click(function(){
+				$("#typed").typed('reset');
 			});
 
 			function newTyped(){ /* A new typed object */ }
