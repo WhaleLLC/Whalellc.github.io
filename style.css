@@ -1,3 +1,14 @@
+/* шрифты */
+      @font-face {
+    font-family: roboto-regular; /* Имя шрифта */
+    src: url(http://vvhale.com.ua/fonts/roboto-regular.ttf); /* Путь к файлу со шрифтом */
+   }
+   
+      
+      @font-face {
+    font-family:  PragmaticaLightC; /* Имя шрифта */
+    src: url(http://vvhale.com.ua/fonts/PragmaticaLightC.otf); /* Путь к файлу со шрифтом */
+   }
 /* обнуление */
 
 * {
@@ -336,6 +347,7 @@ h1 {
 	color: #ccc;
 	text-transform: uppercase;
 	margin-bottom: 50px;
+	font-family: roboto-regular;
 }
 /* Who we are */
 #who-are-we{
