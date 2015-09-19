@@ -356,8 +356,9 @@ h1 {
 	color: #ccc;
 	text-transform: uppercase;
 	margin-bottom: 50px;
-	font-size: 55px;
-	font-family: MyriadPro-BoldCond;
+	font-family: roboto-regular;
+	font-size: 44px;
+	/*font: 600 40px 'PT Sans', sans-serif;*/
 }
 /* Who we are */
 #who-are-we{
@@ -414,25 +415,36 @@ h1 {
 }
 
 #who-are-you .circles span {
-	display: inline-block;
-	vertical-align: top;
-	border-radius: 15%;
-	font-weight: bold;
-	color: #fff;
-	padding: 10px;
-	margin: 10px;
-	width: 190px;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-	box-sizing: border-box;
-	cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 100%;
+    font-weight: bold;
+    color: #fff;
+    padding: 50px;
+    margin: 17px;
+    width: 200px;
+    height: 200px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,123,255,1);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0,123,255,1);
+    box-shadow: 0px 0px 10px 3px rgba(0,123,255,1);
+    -moz-box-shadow: 0px 0px 10px 10px rgba(0,123,255,1);
 }
 
 #who-are-you .circles span:hover {
 	opacity: .8;
-	box-shadow: 0 0 110px -28px #000;
+    -webkit-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+    -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+    box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+    -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+/* 			-ms-transform: scale(1.1,1.1); 
+			-webkit-transform: scale(1.1,1.1); 
+			transform: scale(1.1,1.1); */
 }
 
 #who-are-you .circles span .icon {
