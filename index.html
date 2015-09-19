@@ -55,9 +55,23 @@
 			</div>
 		</section>
 		<section id="services">
-			<h1></h1>
-			<h1>Вот что мы можем Вам предложить ...</h1>
-			<img src="img/lp2.png">
+			<p>Для сферы <u>розничных продаж</u> мы предлагаем следующие услуги...</p>
+			<div class="services-list">
+				<div class="item">
+					<img class="icon" src="img/lp2.png">
+					<h2>Интернет-магазин</h2>
+					<p>Используется для продвижения и продажи большого ассортимента товаров различных категорий</p>
+				</div>
+				<div class="item">
+					<img class="icon" src="img/lp2.png">
+					<h2>Лендинг</h2>
+					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+		</section>
+		<section id="ads">
+			<h1>Где и как мы будем продвигать<br>Ваши продукты/услуги...</h1>
 		</section>
 
 <!-- БЛОК С ФОРМОЙ ОТПАРВКИ И КОНТАКТАМИ -->
@@ -106,6 +120,11 @@ $("#dark").click(function(){
 $(".circles span").click(function(){
 	$("#who-are-you").fadeOut(800);
 	$("#services").fadeIn(800);
+})
+
+$(".services-list .item").click(function(){
+	$("#services").fadeOut(800);
+	$("#ads").fadeIn(800);
 })
 </script>
 	<!-- ПОЯВЛЕНИЕ И ПЕЧАТЬ СРАЗУ ПОСЛЕ ЗАГРУЗКИ СТРАНИЦЫ -->
