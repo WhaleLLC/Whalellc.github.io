@@ -48,15 +48,15 @@
 			<div id="buttonhide" style="display:none;"><button class="next">Узнать подробнее</button></div>
 			<h1><span><span></h1>
 			<div style="display: none;" class="circles">
-				<span><img class="icon" src="img/finance-and-business4.png"><p>Розничные продажи</p></span>
-				<span><img class="icon" src="img/factory6.png"><p>Производители</p></span>
-				<span><img class="icon" src="img/businessmen26.png"><p>Сфера услуг</p></span>
-				<span><img class="icon" src="img/seo40.png"><p>Семинары и вебинары</p></span>
+				<span id="circ_1"><!--img class="icon" src="img/finance-and-business4.png"--><p>Розничные продажи</p></span>
+				<span id="circ_2"><!-- <img class="icon" src="img/factory6.png"> --><p style="margin-top: 65px;">Производители</p></span>
+				<span id="circ_3"><!-- <img class="icon" src="img/businessmen26.png"> --><p style="margin-top: 65px;">Сфера услуг</p></span>
+				<span id="circ_4"><!-- <img class="icon" src="img/seo40.png"> --><p>Семинары и вебинары</p></span>
 			</div>
 		</section>
 		<section id="services">
-			<p>Для сферы <u>розничных продаж</u> мы предлагаем следующие услуги...</p>
-			<div class="services-list">
+			<p><span></span></p>
+			<div style="display: none;" class="services-list">
 				<div class="item">
 					<img class="icon" src="img/lp2.png">
 					<h2>Интернет-магазин</h2>
@@ -71,7 +71,7 @@
 			<div style="clear:both"></div>
 		</section>
 		<section id="ads">
-			<h1>Где и как мы будем продвигать<br>Ваши продукты/услуги...</h1>
+			<h1><span></span></h1>
 		</section>
 
 <!-- БЛОК С ФОРМОЙ ОТПАРВКИ И КОНТАКТАМИ -->
@@ -116,15 +116,144 @@ $("#dark").click(function(){
 	$("#contactbox").fadeOut(300);
 });
 
-
+//третий экран
 $(".circles span").click(function(){
 	$("#who-are-you").fadeOut(800);
 	$("#services").fadeIn(800);
+					setTimeout(function(){
+					$("#services .services-list").fadeIn(800);
+					},3500);
+	
 })
+//Розничные продажи
+$("#circ_1").click(function(){
+	setTimeout(function(){
+				$(function(){
+				$("#services p:eq(0) > span").typed({
+					strings: ["Для сферы <u>розничных продаж</u> мы предлагаем следующие варианты..."],
+					typeSpeed: 8,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
 
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+	},500);	
+});
+//Производители
+$("#circ_2").click(function(){
+	setTimeout(function(){
+				$(function(){
+				$("#services p:eq(0) > span").typed({
+					strings: ["Для сферы <u>производителкй</u> мы предлагаем следующие варианты..."],
+					typeSpeed: 8,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+	},500);	
+});
+//Сфера услуг
+$("#circ_3").click(function(){
+	setTimeout(function(){
+				$(function(){
+				$("#services p:eq(0) > span").typed({
+					strings: ["Для сферы <u>услуг</u> мы предлагаем..."],
+					typeSpeed: 8,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+	},500);	
+});
+//Сфера услуг
+$("#circ_4").click(function(){
+	setTimeout(function(){
+				$(function(){
+				$("#services p:eq(0) > span").typed({
+					strings: ["Для продвижения <u>семинаров и вебинаров</u> мы предлагаем..."],
+					typeSpeed: 8,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+	},500);	
+});
+
+//четвертый экран
 $(".services-list .item").click(function(){
 	$("#services").fadeOut(800);
 	$("#ads").fadeIn(800);
+
+		setTimeout(function(){
+			$(function(){
+				$("#ads h1 span").typed({
+					strings: ["Где и как мы будем продвигать<br>Ваши продукты/услуги..."],
+					typeSpeed: 15,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+
+			function newTyped(){ /* A new typed object */ }
+
+			function foo(){ console.log("Callback"); }
+		}, 500);
+	
+	
 })
 </script>
 	<!-- ПОЯВЛЕНИЕ И ПЕЧАТЬ СРАЗУ ПОСЛЕ ЗАГРУЗКИ СТРАНИЦЫ -->
@@ -185,7 +314,7 @@ $(".services-list .item").click(function(){
 			setTimeout(function () {
 				$(function(){
 					$("#who-are-you h1:eq(1) > span").typed({
-						strings: ["В какой сфере Вы работаете?"],
+						strings: ["<span style='color: white;'>В какой сфере Вы работаете ?<span>"],
 						typeSpeed: 15,
 						startDelay: 0,
 						backDelay: 500,

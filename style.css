@@ -350,7 +350,7 @@ header .contacts button:before {
 }
 
 header .contacts button:hover {
-	background-color: #40DFFF;
+	background-color: rgba(0,123,255,1);
 }
 
 h1 {
@@ -403,8 +403,8 @@ h1 {
 }
 
 #who-are-you .next:hover {
-	color: #40DFFF;
-	border: 2px solid #40DFFF;
+	color: rgba(0,123,255,1);
+	border: 2px solid rgba(0,123,255,1);
 }
 
 #who-are-you .circles {
@@ -417,7 +417,7 @@ h1 {
     border-radius: 100%;
     font-weight: bold;
     color: #fff;
-    padding: 50px;
+    padding: 15px;
     margin: 17px;
     width: 200px;
     height: 200px;
@@ -433,15 +433,26 @@ h1 {
     -moz-box-shadow: 0px 0px 10px 10px rgba(0,123,255,1);
 }
 
-#who-are-you .circles span:hover {
-	opacity: .8;
+#who-are-you .circles span:hover p{
+/*	opacity: .8;
     -webkit-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
-/* 			-ms-transform: scale(1.1,1.1); 
+ 			-ms-transform: scale(1.1,1.1); 
 			-webkit-transform: scale(1.1,1.1); 
 			transform: scale(1.1,1.1); */
+color: #27ae60; 			
+}
+
+#who-are-you .circles span:hover {
+    -webkit-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+    -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+    box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+    -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
+ 			/*-ms-transform: scale(1.1,1.1); 
+			-webkit-transform: scale(1.1,1.1); 
+			transform: scale(1.1,1.1); */			
 }
 
 #who-are-you .circles span .icon {
@@ -451,8 +462,14 @@ h1 {
 }
 
 #who-are-you .circles span p {
-	font-size: 20px;
-	font-family: MyriadPro-BoldCond;
+	margin-top: 55px;
+    font-size: 27px;
+    font-family: MyriadPro-BoldCond;
+	text-transform: uppercase;
+	    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* Services */
