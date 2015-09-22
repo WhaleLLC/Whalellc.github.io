@@ -74,6 +74,31 @@
 			<h1>Где и как мы будем продвигать<br>Ваши продукты/услуги...</h1>
 		</section>
 
+		<!-- Меню навигации -->
+		<div id="navbar">
+			<a href="#" class="toggle">
+				<span class="caret"></span>
+			</a>
+			<div class="steps">
+				<div class="strip">
+					<div class="step">
+						<img src="img/step.jpg">
+						<p>Главная страница</p>
+					</div>
+					<span class="step-arrow"></span>
+					<div class="step">
+						<img src="img/step.jpg">
+						<p>Вторая страница</p>
+					</div>
+					<span class="step-arrow"></span>
+					<div class="step">
+						<img src="img/step.jpg">
+						<p>Третья страница</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 <!-- БЛОК С ФОРМОЙ ОТПАРВКИ И КОНТАКТАМИ -->
 <div id="contactbox">
 	<h1>Звоните в любое время!</h1>
@@ -215,6 +240,13 @@ $(".services-list .item").click(function(){
 				$(".contacts > button").fadeIn(1000);
 			},4500);
 		}
+
+		/* Открытие меню навигации */
+		$("#navbar .toggle").click(function(){
+			$("#navbar").toggleClass("active")
+		})
+
+
 	})
 </script>
 <!-- END -->
