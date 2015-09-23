@@ -54,9 +54,12 @@
 				<span id="circ_4"><!-- <img class="icon" src="img/seo40.png"> --><p>Семинары и вебинары</p></span>
 			</div>
 		</section>
-		<section id="services">
+		
+		<!-- для розничных -->
+		<section id="s1" class="services">
 			<p><span></span></p>
 			<div style="display: none;" class="services-list">
+		<div id="for_c1_c2">
 				<div class="item">
 					<img class="icon" src="img/lp2.png">
 					<h2>Интернет-магазин</h2>
@@ -67,15 +70,81 @@
 					<h2>Лендинг</h2>
 					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
 				</div>
-			</div>
+		</div>	
+		</div>
 			<div style="clear:both"></div>
 		</section>
-		<section id="ads">
+		
+		<!-- для производителей -->
+		<section id="s2" class="services">
+			<p><span></span></p>
+			<div style="display: none;" class="services-list">
+		<div id="for_c1_c2">
+				<div class="item">
+					<img class="icon" src="img/lp2.png">
+					<h2>Интернет-магазин</h2>
+					<p>Используется для продвижения и продажи большого ассортимента товаров различных категорий</p>
+				</div>
+				<div class="item">
+					<img class="icon" src="img/lp2.png">
+					<h2>Лендинг</h2>
+					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
+				</div>
+		</div>	
+		</div>
+			<div style="clear:both"></div>
+		</section>
+		
+		<!-- для усгул и вебинаров -->
+		<section id="s34" class="services">
+				<!-- блок для услуг -->
+			<div id="uslugi">
+				<h1><span></span></h1>
+			</div>
+		<!-- блок для вебинаров -->
+			<div id="vebinar">
+				<h1><span></span></h1>
+			</div>
+			<p><span></span></p>
+			<!--div style="display: none;" class="services-list">
+		<div id="for_c1_c2">
+				<div class="item">
+					<img class="icon" src="img/lp2.png">
+					<h2>Интернет-магазин</h2>
+					<p>Используется для продвижения и продажи большого ассортимента товаров различных категорий</p>
+				</div>
+				<div class="item">
+					<img class="icon" src="img/lp2.png">
+					<h2>Лендинг</h2>
+					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
+				</div>
+		</div>	
+		</div-->
+			<div style="clear:both"></div>
+		</section>
+		
+		<!-- при выборе розничных продаж  -->
+		<!-- привыборе интернет-магазина -->
+		<section id="ads_magaz_rozn">
+			<h1><span></span></h1>
+		</section>
+		<!-- привыборе лендинга -->
+		<section id="ads_landing_rozn">
+			<h1><span></span></h1>
+		</section>
+		
+		<!-- при выборе производителей  -->
+		<!-- привыборе интернет-магазина -->
+		<section id="ads_magaz_manuf">
+			<h1><span></span></h1>
+		</section>
+		<!-- привыборе лендинга -->
+		<section id="ads_landing_manuf">
 			<h1><span></span></h1>
 		</section>
 
 		<!-- Меню навигации -->
-		<div id="navbar">
+		<div style="display:none;" id="navbar">
 			<a href="#" class="toggle">
 				<span class="caret"></span>
 			</a>
@@ -141,20 +210,35 @@ $("#dark").click(function(){
 	$("#contactbox").fadeOut(300);
 });
 
-//третий экран
-$(".circles span").click(function(){
+//третий экран розничные продажи
+$("#circ_1").click(function(){
 	$("#who-are-you").fadeOut(800);
-	$("#services").fadeIn(800);
+	$("#s1").fadeIn(800);
 					setTimeout(function(){
-					$("#services .services-list").fadeIn(800);
+					$("#s1 .services-list").fadeIn(800);
 					},3500);
 	
-})
+});
+//третий экран производители
+$("#circ_2").click(function(){
+	$("#who-are-you").fadeOut(800);
+	$("#s2").fadeIn(800);
+					setTimeout(function(){
+					$("#s2 .services-list").fadeIn(800);
+					},3500);
+	
+});
+//третий экран услуги + вебинары
+$("#circ_3 , #circ_4").click(function(){
+	$("#who-are-you").fadeOut(800);
+	$("#s34").fadeIn(800);
+					$(".services .services-list").fadeIn(100);	
+});
 //Розничные продажи
 $("#circ_1").click(function(){
 	setTimeout(function(){
 				$(function(){
-				$("#services p:eq(0) > span").typed({
+				$("#s1 p:eq(0) > span").typed({
 					strings: ["Для сферы <u>розничных продаж</u> мы предлагаем следующие варианты..."],
 					typeSpeed: 8,
 					startDelay: 0,
@@ -178,7 +262,7 @@ $("#circ_1").click(function(){
 $("#circ_2").click(function(){
 	setTimeout(function(){
 				$(function(){
-				$("#services p:eq(0) > span").typed({
+				$("#s2 p:eq(0) > span").typed({
 					strings: ["Для сферы <u>производителкй</u> мы предлагаем следующие варианты..."],
 					typeSpeed: 8,
 					startDelay: 0,
@@ -200,9 +284,11 @@ $("#circ_2").click(function(){
 });
 //Сфера услуг
 $("#circ_3").click(function(){
+	$("#for_c1_c2").hide();
+			$("#uslugi").fadeIn(800);
 	setTimeout(function(){
 				$(function(){
-				$("#services p:eq(0) > span").typed({
+				$("#uslugi h1 > span").typed({
 					strings: ["Для сферы <u>услуг</u> мы предлагаем..."],
 					typeSpeed: 8,
 					startDelay: 0,
@@ -221,12 +307,15 @@ $("#circ_3").click(function(){
 
 			});
 	},500);	
+
 });
-//Сфера услуг
+//Вебинары
 $("#circ_4").click(function(){
+	$("#for_c1_c2").hide();
+			$("#vebinar").fadeIn(800);
 	setTimeout(function(){
 				$(function(){
-				$("#services p:eq(0) > span").typed({
+				$("#vebinar h1 > span").typed({
 					strings: ["Для продвижения <u>семинаров и вебинаров</u> мы предлагаем..."],
 					typeSpeed: 8,
 					startDelay: 0,
@@ -244,18 +333,120 @@ $("#circ_4").click(function(){
 				});
 
 			});
-	},500);	
+	},500);		
 });
 
 //четвертый экран
-$(".services-list .item").click(function(){
-	$("#services").fadeOut(800);
-	$("#ads").fadeIn(800);
+//привыборе между интернет-магазином и лендингом в розничных продажах
+//Про интернет-магазин
+$("#s1 .item:eq(0)").click(function(){
+	$(".services").fadeOut(800);
+	$("#ads_magaz_rozn").fadeIn(800);
 
 		setTimeout(function(){
 			$(function(){
-				$("#ads h1 span").typed({
-					strings: ["Где и как мы будем продвигать<br>Ваши продукты/услуги..."],
+				$("#ads_magaz_rozn h1 span").typed({
+					strings: ["Все про приимущества интернет-магазина для розничных продаж"],
+					typeSpeed: 15,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+
+			function newTyped(){ /* A new typed object */ }
+
+			function foo(){ console.log("Callback"); }
+		}, 500);
+	
+	
+});
+//Про landing
+$("#s1 .item:eq(1)").click(function(){
+	$(".services").fadeOut(800);
+	$("#ads_landing_rozn").fadeIn(800);
+
+		setTimeout(function(){
+			$(function(){
+				$("#ads_landing_rozn h1 span").typed({
+					strings: ["Все про приимущества лендинга для розничных продаж"],
+					typeSpeed: 15,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+
+			function newTyped(){ /* A new typed object */ }
+
+			function foo(){ console.log("Callback"); }
+		}, 500);
+	
+	
+});
+//привыборе между интернет-магазином и лендингом в производителях
+//Про интернет-магазин
+$("#s2 .item:eq(0)").click(function(){
+	$(".services").fadeOut(800);
+	$("#ads_magaz_manuf").fadeIn(800);
+
+		setTimeout(function(){
+			$(function(){
+				$("#ads_magaz_manuf h1 span").typed({
+					strings: ["Все про приимущества интернет-магазина для производителей"],
+					typeSpeed: 15,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+
+				$(".reset").click(function(){
+					$("#typed").typed('reset');
+				});
+
+			});
+
+			function newTyped(){ /* A new typed object */ }
+
+			function foo(){ console.log("Callback"); }
+		}, 500);
+	
+	
+});
+//Про landing
+$("#s2 .item:eq(1)").click(function(){
+	$(".services").fadeOut(800);
+	$("#ads_magaz_manuf").fadeIn(800);
+
+		setTimeout(function(){
+			$(function(){
+				$("#ads_magaz_manuf h1 span").typed({
+					strings: ["Все про приимущества лендинга для производителей"],
 					typeSpeed: 15,
 					startDelay: 0,
 					backDelay: 6500,
@@ -283,6 +474,7 @@ $(".services-list .item").click(function(){
 </script>
 	<!-- ПОЯВЛЕНИЕ И ПЕЧАТЬ СРАЗУ ПОСЛЕ ЗАГРУЗКИ СТРАНИЦЫ -->
 <script>
+//Тут первый экран приветствия и 2й экран с выбором сферы деятельности
 	$(document).ready(function(){
 		//Печатание текста ^1500 - это задержка
 		$(".logo > img").fadeIn(700);
@@ -331,8 +523,8 @@ $(".services-list .item").click(function(){
 		$("#who-are-you .next").click(nextClick)
 
 		function nextClick() {
-			$("#who-are-you #buttonhide").fadeOut(1000)
-
+			$("#who-are-you #buttonhide").fadeOut(1000);
+			$("#navbar").fadeIn(1000);
 			$("#who-are-you h1:eq(0)").animate({paddingTop: "0px"},1000);
 			$("#who-are-you h1:eq(0)").fadeOut(1000)
 
@@ -373,10 +565,10 @@ $(".services-list .item").click(function(){
 		/* Открытие меню навигации */
 		$("#navbar .toggle").click(function(){
 			$("#navbar").toggleClass("active")
-		})
+		});
 
 
-	})
+	});
 </script>
 <!-- END -->
 	</body>
