@@ -605,14 +605,14 @@ h1 {
     box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
 <<<<<<< HEAD
- 			-ms-transform: scale(1.1,1.1); 
-			-webkit-transform: scale(1.1,1.1); 
+ 			-ms-transform: scale(1.1,1.1);
+			-webkit-transform: scale(1.1,1.1);
 =======
 /* 			-ms-transform: scale(1.1,1.1);
 			-webkit-transform: scale(1.1,1.1);
 >>>>>>> c063dd1a7e8a1b75615487c2d8866df69e9f4e97
 			transform: scale(1.1,1.1); */
-color: #27ae60; 			
+color: #27ae60;
 }
 
 #who-are-you .circles span:hover {
@@ -620,9 +620,9 @@ color: #27ae60;
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
- 			/*-ms-transform: scale(1.1,1.1); 
-			-webkit-transform: scale(1.1,1.1); 
-			transform: scale(1.1,1.1); */			
+ 			/*-ms-transform: scale(1.1,1.1);
+			-webkit-transform: scale(1.1,1.1);
+			transform: scale(1.1,1.1); */
 }
 
 #who-are-you .circles span .icon {
@@ -691,4 +691,47 @@ color: #27ae60;
 
 .services .services-list .item p {
   font-size: 18px;
+}
+
+/* Структура экрана с описанием услуги */
+section .content {
+  display: flex;
+  padding-top: 50px;
+}
+
+section .content .text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  box-sizing: border-box;
+  padding: 0 50px;
+
+  font-family: roboto-regular;
+}
+
+section .content .text p {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+section .content .text ul {
+  display: inline-block;
+  text-align: left;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0 auto 30px;
+}
+
+section .content .image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40%;
+}
+
+section .image img {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px -5px #000;
 }
