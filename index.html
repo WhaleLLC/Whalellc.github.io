@@ -54,7 +54,7 @@
 				<span id="circ_4"><!-- <img class="icon" src="img/seo40.png"> --><p>Семинары и вебинары</p></span>
 			</div>
 		</section>
-		
+
 		<!-- для розничных -->
 		<section id="s1" class="services">
 			<p><span></span></p>
@@ -70,11 +70,11 @@
 					<h2>Лендинг</h2>
 					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
 				</div>
-		</div>	
+		</div>
 		</div>
 			<div style="clear:both"></div>
 		</section>
-		
+
 		<!-- для производителей -->
 		<section id="s2" class="services">
 			<p><span></span></p>
@@ -90,16 +90,34 @@
 					<h2>Лендинг</h2>
 					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
 				</div>
-		</div>	
+		</div>
 		</div>
 			<div style="clear:both"></div>
 		</section>
-		
+
 		<!-- для усгул и вебинаров -->
 		<section id="s34" class="services">
 				<!-- блок для услуг -->
 			<div id="uslugi">
-				<h1><span></span></h1>
+				<!--<h1><span></span></h1>-->
+
+				<div class="content">
+					<div class="text">
+						<h1>Landing page</h1>
+						<p><b>Lorem ipsum dolor sit amet</b></p>
+						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </p>
+						<p><b>Lorem ipsum dolor sit amet</b></p>
+						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+						<ul>
+							<li>Lorem ipsum dolor sit</li>
+							<li>Lorem ipsum dolor sit</li>
+							<li>Lorem ipsum dolor sit</li>
+						</ul>
+					</div>
+					<div class="image">
+						<img src="img/lp.jpg">
+					</div>
+				</div>
 			</div>
 		<!-- блок для вебинаров -->
 			<div id="vebinar">
@@ -118,11 +136,11 @@
 					<h2>Лендинг</h2>
 					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
 				</div>
-		</div>	
+		</div>
 		</div-->
 			<div style="clear:both"></div>
 		</section>
-		
+
 		<!-- при выборе розничных продаж  -->
 		<!-- привыборе интернет-магазина -->
 		<section id="ads_magaz_rozn">
@@ -132,7 +150,7 @@
 		<section id="ads_landing_rozn">
 			<h1><span></span></h1>
 		</section>
-		
+
 		<!-- при выборе производителей  -->
 		<!-- привыборе интернет-магазина -->
 		<section id="ads_magaz_manuf">
@@ -217,7 +235,7 @@ $("#circ_1").click(function(){
 					setTimeout(function(){
 					$("#s1 .services-list").fadeIn(800);
 					},3500);
-	
+
 });
 //третий экран производители
 $("#circ_2").click(function(){
@@ -226,13 +244,13 @@ $("#circ_2").click(function(){
 					setTimeout(function(){
 					$("#s2 .services-list").fadeIn(800);
 					},3500);
-	
+
 });
 //третий экран услуги + вебинары
 $("#circ_3 , #circ_4").click(function(){
 	$("#who-are-you").fadeOut(800);
 	$("#s34").fadeIn(800);
-					$(".services .services-list").fadeIn(100);	
+					$(".services .services-list").fadeIn(100);
 });
 //Розничные продажи
 $("#circ_1").click(function(){
@@ -256,7 +274,7 @@ $("#circ_1").click(function(){
 				});
 
 			});
-	},500);	
+	},500);
 });
 //Производители
 $("#circ_2").click(function(){
@@ -280,7 +298,7 @@ $("#circ_2").click(function(){
 				});
 
 			});
-	},500);	
+	},500);
 });
 //Сфера услуг
 $("#circ_3").click(function(){
@@ -306,7 +324,7 @@ $("#circ_3").click(function(){
 				});
 
 			});
-	},500);	
+	},500);
 
 });
 //Вебинары
@@ -333,7 +351,7 @@ $("#circ_4").click(function(){
 				});
 
 			});
-	},500);		
+	},500);
 });
 
 //четвертый экран
@@ -368,8 +386,8 @@ $("#s1 .item:eq(0)").click(function(){
 
 			function foo(){ console.log("Callback"); }
 		}, 500);
-	
-	
+
+
 });
 //Про landing
 $("#s1 .item:eq(1)").click(function(){
@@ -401,8 +419,8 @@ $("#s1 .item:eq(1)").click(function(){
 
 			function foo(){ console.log("Callback"); }
 		}, 500);
-	
-	
+
+
 });
 //привыборе между интернет-магазином и лендингом в производителях
 //Про интернет-магазин
@@ -435,8 +453,8 @@ $("#s2 .item:eq(0)").click(function(){
 
 			function foo(){ console.log("Callback"); }
 		}, 500);
-	
-	
+
+
 });
 //Про landing
 $("#s2 .item:eq(1)").click(function(){
@@ -468,8 +486,8 @@ $("#s2 .item:eq(1)").click(function(){
 
 			function foo(){ console.log("Callback"); }
 		}, 500);
-	
-	
+
+
 })
 </script>
 	<!-- ПОЯВЛЕНИЕ И ПЕЧАТЬ СРАЗУ ПОСЛЕ ЗАГРУЗКИ СТРАНИЦЫ -->
