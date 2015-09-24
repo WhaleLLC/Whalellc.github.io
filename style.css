@@ -304,7 +304,7 @@ header .contacts {
 }
 
 header .contacts button {
-	background: #27ae60;
+	background: rgba(0,123,255,1);
 	color: #fff;
 
 	font-size: 16px;
@@ -350,7 +350,7 @@ header .contacts button:before {
 }
 
 header .contacts button:hover {
-	background-color: rgba(0,123,255,1);
+	background-color: #27ae60;
 }
 
 h1 {
