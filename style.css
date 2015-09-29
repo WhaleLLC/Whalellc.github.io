@@ -746,6 +746,11 @@ width: 90%;
     border-radius: 100%;
 }
 
+.left_magaz  .mini_icon > div > i{
+color: black;
+margin-top: 20px;
+}
+
 .left_magaz  h2{
 width: 60%;
     height: 80px;
