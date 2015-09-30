@@ -304,7 +304,7 @@ header .contacts {
 }
 
 header .contacts button {
-	background: #27ae60;
+	background: rgba(0,123,255,1);
 	color: #fff;
 
 	font-size: 16px;
@@ -350,7 +350,7 @@ header .contacts button:before {
 }
 
 header .contacts button:hover {
-	background-color: rgba(0,123,255,1);
+	background-color: #27ae60;
 }
 
 h1 {
@@ -626,15 +626,10 @@ h1 {
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
-<<<<<<< HEAD
- 			-ms-transform: scale(1.1,1.1);
-			-webkit-transform: scale(1.1,1.1);
-=======
-/* 			-ms-transform: scale(1.1,1.1);
-			-webkit-transform: scale(1.1,1.1);
->>>>>>> c063dd1a7e8a1b75615487c2d8866df69e9f4e97
-			transform: scale(1.1,1.1); */
-color: #27ae60;
+		-ms-transform: scale(1.1,1.1);
+		-webkit-transform: scale(1.1,1.1);
+		transform: scale(1.1,1.1); */
+    color: #27ae60;
 }
 
 .who-are-you .circles span:hover {
@@ -665,14 +660,40 @@ color: #27ae60;
 }
 
 /* Services */
+/* классы для анимации сдвига */
+.services .services-list #for_c1_c2  .item{
+transition: 0.8s ease-in-out;
+-webkit-transition: 0.8s ease-in-out;
+-moz-transition: 0.8s ease-in-out;
+-o-transition: 0.8s ease-in-out;
+-khtml-transition: 0.8s ease-in-out;
+}
+
+.inleft{
+transform: translateX(-1000px);
+-webkit-transform: translateX(-1000px);
+-moz-transform: translateX(-1000px);
+-o-transform: translateX(-1000px);
+-khtml-transform: translateX(-1000px);
+}
+
+.inright{
+transform: translateX(1000px);
+-webkit-transform: translateX(1000px);
+-moz-transform: translateX(1000px);
+-o-transform: translateX(1000px);
+-khtml-transform: translateX(1000px);
+}
+/* end */
+
 .services {
   font-family: Myriad-Pro-Semibold-Condensed;
-  padding: 0 100px;
+  padding: 0 10px;
 }
 
 .services p {
-  font-size: 25px;
   margin-bottom: 50px;
+  font : 25px 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .services .services-list .item {
@@ -680,7 +701,7 @@ color: #27ae60;
   float: left;
   box-sizing: border-box;
   width: 50%;
-  padding: 60px 100px 20px;
+  padding: 20px 10px 0px 10px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -700,19 +721,113 @@ color: #27ae60;
   background: rgba(0,0,0,.3)
 }
 
-.services .services-list .item .icon {
-	width: 90%;
-  max-width: 280px;
-  margin: 0 auto 30px;
+.services .services-list .item .icon1{
+    float: right;
+    max-width: 50%;
 }
 
-.services .services-list .item h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+.services .services-list .item .icon2{
+    float: left;
+    max-width: 50%;
 }
 
-.services .services-list .item p {
-  font-size: 18px;
+.item  h3{
+	width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+
+/* левая картинка интернет магаз */
+.left_magaz{
+width: 50%;
+float: left;
+}
+
+.left_magaz  .mini_icon{
+    float: left;
+    max-width: 40%;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin-right: 14px;
+	border: 2px solid white;
+}
+
+.left_magaz  .mini_icon > div{
+width: 90%;
+    height: 90%;
+    margin: 5% auto;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.left_magaz  .mini_icon > div > i{
+color: black;
+margin-top: 20px;
+}
+
+.left_magaz  h2{
+width: 60%;
+    height: 80px;
+    /* font: 16px 'Open Sans', Arial, Helvetica, sans-serif; */
+    float: left;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-align: right;
+    font-weight: 900;
+	font-size: 22px;
+    padding-top: 5px;
+}
+
+/* правая картинка лендинг */
+.right_land{
+width: 50%;
+float: right;
+}
+
+.right_land  .mini_icon{
+float: left;
+    max-width: 40%;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin-left: 14px;
+	border: 2px solid white;
+}
+
+.right_land  .mini_icon div{
+width: 90%;
+    height: 90%;
+    margin: 5% auto;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.right_land  h2{
+width: 60%;
+    height: 80px;
+    /* font: 16px 'Open Sans', Arial, Helvetica, sans-serif; */
+    float: left;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: 900;
+	font-size: 22px;
+    padding-top: 5px;
+    margin-left: 20px;
+}
+
+.right_land  p{
+    width: 80%;
+    font: 16px 'Open Sans', Arial, Helvetica, sans-serif;
+    float: left;
+    text-align: left;
+    padding-left: 20%;
+    margin-bottom: 10px;
+	margin-right: 20px;
 }
 
 /* Структура экрана с описанием услуги */

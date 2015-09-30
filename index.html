@@ -3,7 +3,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>WhaleLLC</title>
-
+		<!-- иконки-шрифты -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<!-- end -->
 		<link rel="stylesheet" href="style.css" />
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="js/typed.js"></script>
@@ -56,7 +58,7 @@
 		</section>
 
 		<!-- Розничные продажи -->
-		<section id="s2_1" class="services">
+		<!--<section id="s2_1" class="services">
 			<p><span></span></p>
 			<div style="display: none;" class="services-list">
 				<div id="for_c1_c2">
@@ -69,10 +71,40 @@
 							<img class="icon" src="img/lp2.png">
 							<h2>Лендинг</h2>
 							<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
+						</div>-->
+
+		<!-- для розничных -->
+		<section id="s2_1" class="services">
+			<p style="padding-top: 250px; font-size: 35px;"><span></span></p>
+			<div style="display: none;" class="services-list">
+				<div id="for_c1_c2">
+					<div class="item inleft">
+						<div style="height: 65px;"><h3 style="float: right;">Интернет-магазин</h3></div>
+						<img class="icon1" src="img/lp2.png"/>
+						<div class="left_magaz">
+							<h2>Большой ассортимент различного товара</h2>
+							<div class="mini_icon" ><div><i class="fa fa-camera-retro fa-2x"></i></div></div>
+							<h2>Большой ассортимент товаров</h2>
+							<div class="mini_icon" ><div><i class="fa fa-camera-retro fa-2x"></i></div></div>
+							<h2>Большой ассортимент товаров</h2>
+							<div class="mini_icon" ><div><i class="fa fa-camera-retro fa-2x"></i></div></div>
 						</div>
+					</div>
+					<div class="item inright">
+						<div style="height: 65px;"><h3 style="float: left;">Landing Page</h3></div>
+						<img class="icon2" src="img/lp1.png"/>
+						<div class="right_land">
+							<div class="mini_icon" ><div></div></div>
+							<h2>Страница захвата целевой продукции</h2>
+							<div class="mini_icon" ><div></div></div>
+							<h2>Страница захвата целевой продукции</h2>
+							<div class="mini_icon" ><div></div></div>
+							<h2>Страница захвата целевой продукции</h2>
+						</div>
+					</div>
 				</div>
+				<div style="clear:both"></div>
 			</div>
-			<div style="clear:both"></div>
 		</section>
 
 		<!-- Производители -->
@@ -81,12 +113,12 @@
 			<div style="display: none;" class="services-list">
 		<div id="for_c1_c2">
 				<div class="item">
-					<img class="icon" src="img/lp2.png">
+					<img class="icon1" src="img/lp3.png">
 					<h2>Интернет-магазин</h2>
 					<p>Используется для продвижения и продажи большого ассортимента товаров различных категорий</p>
 				</div>
 				<div class="item">
-					<img class="icon" src="img/lp2.png">
+					<img class="icon2" src="img/lp4.png">
 					<h2>Лендинг</h2>
 					<p>Высококонверсионный одностраничный сайт для продвижения и продажи одного-двух товаров</p>
 				</div>
@@ -233,6 +265,73 @@
 <div id="dark"></div>
 	<!-- ПОЯВЛЕНИЕ ФОРМЫ И КОНТАКТОВ + ВЫБОР -->
 <script>
+
+/*
+<<<<<<< HEAD
+=======
+$(".contacts button").click(function(){
+	$("#contactbox").fadeIn(400);
+	$("#dark").fadeIn(300);
+});
+
+$("#dark").click(function(){
+	$(this).fadeOut(400);
+	$("#contactbox").fadeOut(300);
+});
+
+//третий экран розничные продажи
+$("#circ_1").click(function(){
+	$("#who-are-you").fadeOut(800);
+	$("#s1").fadeIn(800);
+	setTimeout(function(){
+	$("#s1 p").animate({paddingTop: "0px"},1000);
+	},4000);
+		setTimeout(function(){
+		$("#s1 p").fadeOut(800);
+		},5000);
+					setTimeout(function(){
+					$("#s1 .services-list").fadeIn(100);
+					},5800);
+
+						setTimeout(function(){
+							$('#s1  .services-list  #for_c1_c2 .item:eq(0)').removeClass('inleft');
+							$('#s1  .services-list  #for_c1_c2 .item:eq(1)').removeClass('inright');
+						},6000);
+
+});
+//третий экран производители
+$("#circ_2").click(function(){
+	$("#who-are-you").fadeOut(800);
+	$("#s2").fadeIn(800);
+					setTimeout(function(){
+					$("#s2 .services-list").fadeIn(800);
+					},3500);
+
+});
+//третий экран услуги + вебинары
+$("#circ_3 , #circ_4").click(function(){
+	$("#who-are-you").fadeOut(800);
+	$("#s34").fadeIn(800);
+					$(".services .services-list").fadeIn(100);
+});
+//Розничные продажи
+$("#circ_1").click(function(){
+	setTimeout(function(){
+				$(function(){
+				$("#s1 p:eq(0) > span").typed({
+					strings: ["Для сферы <u>розничных продаж</u> мы предлагаем следующие варианты..."],
+					typeSpeed: 8,
+					startDelay: 0,
+					backDelay: 6500,
+					loop: false,
+					contentType: 'html', // or text
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); },
+					resetCallback: function() { newTyped(); }
+				});
+>>>>>>> b39376bd685921fc43a26b5baa3f4d0e9fb3c8d0
+*/
 
 	// НАВИГАЦИЯ
 
