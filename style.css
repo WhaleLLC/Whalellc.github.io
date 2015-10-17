@@ -396,8 +396,11 @@ h1 {
   cursor: pointer;
   text-align: center;
   background-color: rgba(0,0,0,0.15);
+  text-decoration: none;
+  color: #fff;
+  font-family: Myriad-Pro-Semibold-Condensed;
   margin: 0;
-  margin-left: -30px;
+  margin-left: -55px;
   border: 0;
   -webkit-border-radius: 10px 10px 0 0;
   -khtml-border-radius: 10px 10px 0 0;
@@ -406,7 +409,7 @@ h1 {
   outline: 0;
   padding: 20px;
   display: inline-block;
-  width: 60px;
+  width: 110px;
   height: 60px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -421,18 +424,19 @@ h1 {
   transition: background-color 0.25s ease-in-out;
 }
 
-#navbar .toggle:hover .caret {
+#navbar .toggle:hover .caret,
+#navbar .toggle:hover .text {
   opacity: 1;
 }
 
 #navbar.active .toggle {
   background-color: rgba(25,25,25,0.9);
-  padding: 25px 19px;
+  padding: 20px 19px;
 }
 
 #navbar .toggle .caret {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin: 0 -1px;
   width: 20px;
   height: 20px;
@@ -453,6 +457,19 @@ h1 {
   height: 10px;
   line-height: 10px;
   background-position: -34px -23px;
+}
+
+#navbar .toggle .text {
+  opacity: 0.5;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 15px;
+  line-height: 10px;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -ms-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
 }
 
 #navbar .steps {
@@ -502,6 +519,11 @@ h1 {
   opacity: .8;
 }
 
+#navbar .steps .step:last-child:hover {
+  opacity: 1;
+  cursor: default;
+}
+
 #navbar .steps .step > img {
   display: block;
   width: 130px;
@@ -528,11 +550,11 @@ h1 {
 }
 
 /* Who you are */
-#who-are-you {
+.who-are-you {
 	display: block;
 }
-	
-#who-are-you .next {
+
+.who-are-you .next {
 	background: transparent;
 	color: #27ae60;
 
@@ -567,16 +589,16 @@ h1 {
 	transition: all 0.6s ease;
 }
 
-#who-are-you .next:hover {
+.who-are-you .next:hover {
 	color: rgba(0,123,255,1);
 	border: 2px solid rgba(0,123,255,1);
 }
 
-#who-are-you .circles {
+.who-are-you .circles {
 
 }
 
-#who-are-you .circles span {
+.who-are-you .circles span {
     display: inline-block;
     vertical-align: top;
     border-radius: 100%;
@@ -598,24 +620,19 @@ h1 {
     -moz-box-shadow: 0px 0px 10px 10px rgba(0,123,255,1);
 }
 
-#who-are-you .circles span:hover p{
+.who-are-you .circles span:hover p{
 /*	opacity: .8;
     -webkit-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
-<<<<<<< HEAD
- 			-ms-transform: scale(1.1,1.1);
-			-webkit-transform: scale(1.1,1.1);
-=======
-/* 			-ms-transform: scale(1.1,1.1);
-			-webkit-transform: scale(1.1,1.1);
->>>>>>> c063dd1a7e8a1b75615487c2d8866df69e9f4e97
-			transform: scale(1.1,1.1); */
-color: #27ae60;
+		-ms-transform: scale(1.1,1.1);
+		-webkit-transform: scale(1.1,1.1);
+		transform: scale(1.1,1.1); */
+    color: #27ae60;
 }
 
-#who-are-you .circles span:hover {
+.who-are-you .circles span:hover {
     -webkit-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     -moz-box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
     box-shadow: 0px 0px 20px 7px rgba(0,123,255,1);
@@ -625,13 +642,13 @@ color: #27ae60;
 			transform: scale(1.1,1.1); */
 }
 
-#who-are-you .circles span .icon {
+.who-are-you .circles span .icon {
 	display: block;
 	width: 50%;
 	margin: 0 auto 30px;
 }
 
-#who-are-you .circles span p {
+.who-are-you .circles span p {
 	margin-top: 55px;
     font-size: 27px;
     font-family: MyriadPro-BoldCond;
@@ -724,7 +741,7 @@ transform: translateX(1000px);
 
 /* левая картинка интернет магаз */
 .left_magaz{
-width: 50%; 
+width: 50%;
 float: left;
 }
 
@@ -767,7 +784,7 @@ width: 60%;
 
 /* правая картинка лендинг */
 .right_land{
-width: 50%; 
+width: 50%;
 float: right;
 }
 
@@ -812,6 +829,7 @@ width: 60%;
     margin-bottom: 10px;
 	margin-right: 20px;
 }
+
 /* Структура экрана с описанием услуги */
 section .content {
   display: flex;
