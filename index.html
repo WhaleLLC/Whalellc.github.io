@@ -42,7 +42,7 @@
 			<div class="contacts">
 				<button style="display: none;">Есть вопросы?</button>
 			</div>
-			<div class="logo"><img style="display: none;" src="http://vvhale.com.ua/img/logo.png"></div>
+			<div class="logo"><img style="display: none;" src="img/logo.png"></div>
 		</header>
 
 		<section id="s1" class="who-are-you">
@@ -78,7 +78,7 @@
 			<p style="padding-top: 250px; font-size: 35px;"><span></span></p>
 			<div style="display: none;" class="services-list">
 				<div id="for_c1_c2">
-					<div class="item inleft">
+					<div class="item">
 						<div style="height: 65px;"><h3 style="float: right;">Интернет-магазин</h3></div>
 						<img class="icon1" src="img/lp2.png"/>
 						<div class="left_magaz">
@@ -90,7 +90,7 @@
 							<div class="mini_icon" ><div><i class="fa fa-camera-retro fa-2x"></i></div></div>
 						</div>
 					</div>
-					<div class="item inright">
+					<div class="item">
 						<div style="height: 65px;"><h3 style="float: left;">Landing Page</h3></div>
 						<img class="icon2" src="img/lp1.png"/>
 						<div class="right_land">
@@ -102,8 +102,8 @@
 							<h2>Страница захвата целевой продукции</h2>
 						</div>
 					</div>
+					<div style="clear:both"></div>
 				</div>
-				<div style="clear:both"></div>
 			</div>
 		</section>
 
@@ -188,11 +188,28 @@
 			<h1><span></span></h1>
 			<p><b>Розничные продажи</b></p>
 			<p>Интернет-магазин</p>
+			<br>
+			<p>Для продвижения <b>интернет-магазина</b> мы предлагаем такие услуги:</p>
+			<div>
+				<button>Контекстная реклама</button>
+				<button>SEO</button>
+				<button>SMM</button>
+			</div>
+			<div><button class="next">Посмотреть пример сайта &rarr;</button></div>
 		</section>
+
 		<section id="s3_2">
 			<h1><span></span></h1>
 			<p><b>Розничные продажи</b></p>
 			<p>Лендинг</p>
+			<br>
+			<p>Для продвижения <b>лендинга</b> мы предлагаем такие услуги:</p>
+			<div>
+				<button>Контекстная реклама</button>
+				<button>SEO</button>
+				<button>SMM</button>
+			</div>
+			<div><button class="next">Посмотреть пример сайта &rarr;</button></div>
 		</section>
 
 		<!-- при выборе производителей  -->
@@ -216,6 +233,24 @@
 			<p><b>Производители</b></p>
 			<p>Лендинг</p>
 		</section>
+
+		<!-- Level 4 -->
+		<!-- Пример сайта с отзывом -->
+		<section id="s4_1">
+			<h1><span></span></h1>
+			<p><b>Пример сайта</b></p>
+			<p>Пример готового сайта с отзывом</p>
+			<div><button style="margin: 10px;padding:15px;background:#188F18;color:#fff;">Заказать</button></div>
+		</section>
+
+		<!-- Level 5 -->
+		<!-- Последняя страница -->
+		<section id="s5_1">
+			<h1><span></span></h1>
+			<p><b>Конец!</b></p>
+			<p>Заказывай услуги или проваливай!</p>
+		</section>
+
 
 		<!-- Меню навигации -->
 		<div style="display:none;" id="navbar">
@@ -349,12 +384,15 @@ $("#circ_1").click(function(){
 		s3_2 : "Лендинг (РП)",
 		s3_3 : "Интер-маг (Пр)",
 		s3_4 : "Лендинг (Пр)",
+		s4_1 : "Пример ленда",
+		s5_1 : "Конец!",
 	}
 
 	// Обновление меню
 	function updateMenu(id){
 		var html = ""
 		switch (id) {
+			//Level 2 - Выбор сферы
 			case 's1':
 				html += "</span><div class='step'><img src='img/step.jpg'><p>"+screens["s1"]+"</p></div>"
 				break
@@ -374,6 +412,35 @@ $("#circ_1").click(function(){
 				html += "</span><div onclick=\"navTo('s1')\" class='step'><img src='img/step.jpg'><p>"+screens["s1"]+"</p></div>"
 				html += "<span class='step-arrow'></span><div class='step'><img src='img/step.jpg'><p>"+screens["s2_4"]+"</p></div>"
 				break
+			//Level 3 - Описание услуг
+			case 's3_1':
+				html += "</span><div onclick=\"navTo('s1')\" class='step'><img src='img/step.jpg'><p>"+screens["s1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div onclick=\"navTo('s2_1')\" class='step'><img src='img/step.jpg'><p>"+screens["s2_1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div class='step'><img src='img/step.jpg'><p>"+screens["s3_1"]+"</p></div>"
+				break
+			case 's3_2':
+				html += "</span><div onclick=\"navTo('s1')\" class='step'><img src='img/step.jpg'><p>"+screens["s1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div onclick=\"navTo('s2_1')\" class='step'><img src='img/step.jpg'><p>"+screens["s2_1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div class='step'><img src='img/step.jpg'><p>"+screens["s3_2"]+"</p></div>"
+				break
+			case 's4_1':
+				html += "</span><div onclick=\"navTo('s1')\" class='step'><img src='img/step.jpg'><p>"+screens["s1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div onclick=\"navTo('s2_1')\" class='step'><img src='img/step.jpg'><p>"+screens["s2_1"]+"</p></div>"
+				//ТУДУ: сделать массив-вектор с номерами посещенных страниц по уровням.. пример pages=[3,2,1,1]
+				if (currId == "s3_1"){
+					html += "<span class='step-arrow'></span><div onclick=\"navTo('s3_1')\" class='step'><img src='img/step.jpg'><p>"+screens["s3_1"]+"</p></div>"
+				}else if(currId == "s3_2") {
+					html += "<span class='step-arrow'></span><div onclick=\"navTo('s3_2')\" class='step'><img src='img/step.jpg'><p>"+screens["s3_2"]+"</p></div>"
+				}
+				html += "<span class='step-arrow'></span><div class='step'><img src='img/step.jpg'><p>"+screens["s4_1"]+"</p></div>"
+				break
+			case 's5_1':
+				html += "</span><div onclick=\"navTo('s1')\" class='step'><img src='img/step.jpg'><p>"+screens["s1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div onclick=\"navTo('s2_1')\" class='step'><img src='img/step.jpg'><p>"+screens["s2_1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div onclick=\"navTo('s3_1')\" class='step'><img src='img/step.jpg'><p>"+screens["s3_1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div onclick=\"navTo('s4_1')\" class='step'><img src='img/step.jpg'><p>"+screens["s4_1"]+"</p></div>"
+				html += "<span class='step-arrow'></span><div class='step'><img src='img/step.jpg'><p>"+screens["s5_1"]+"</p></div>"
+				break
 		}
 		$("#navbar .steps .strip").html(html)
 	}
@@ -382,10 +449,10 @@ $("#circ_1").click(function(){
 	function navTo(id){
 
 		// Закрыть текущую страницу
-		$("#"+currId).fadeOut(800);
+		$("#"+currId).fadeOut(800)
 
 		// Открыть заданную страницу
-		$("#"+id).fadeIn(800);
+		$("#"+id).fadeIn(800)
 
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -398,11 +465,24 @@ $("#circ_1").click(function(){
 			case 's2_1':
 				$("#s2_1 p:eq(0)").html("<span></span>")
 				$(".services-list").hide()
-				break;
+				$("#s2_1 p").css({paddingTop: 250})
+				break
 			case 's2_2':
 				$("#s2_2 p:eq(0)").html("<span></span>")
 				$(".services-list").hide()
-				break;
+				break
+			case 's3_1':
+				$("#s3_1 h1").html("<span></span>")
+				break
+			case 's3_2':
+				$("#s3_2 h1").html("<span></span>")
+				break
+			case 's4_1':
+				$("#s4_1 h1").html("<span></span>")
+				break
+			case 's5_1':
+				$("#s5_1 h1").html("<span></span>")
+				break
 		}
 
 		// !!Особенности открытия страниц
@@ -414,27 +494,43 @@ $("#circ_1").click(function(){
 				typeTo("#s1 h1:eq(1) > span","<span style='color: white;'>В какой сфере Вы работаете ?<span>")
 				break
 			case 's2_1':
+				typeTo("#s2_1 p:eq(0) > span","Для сферы <u>розничных продаж</u> мы предлагаем следующие варианты...")
 				setTimeout(function(){
-						$("#s2_1 .services-list").fadeIn(800);
-				},3500);
+						$("#s2_1 .services-list").fadeIn(400)
+				},5000)
+				setTimeout(function(){
+						$("#s2_1 p").animate({paddingTop: "0px"},1000)
+				},4000)
 				break
 			case 's2_2':
 				setTimeout(function(){
-						$("#s2_2 .services-list").fadeIn(800);
-				},3500);
+						$("#s2_2 .services-list").fadeIn(800)
+				},3500)
 				break
 			case 's2_4':
-				$(".services .services-list").fadeIn(100);
+				$(".services .services-list").fadeIn(100)
+				break
+			case 's3_1':
+				typeTo("#s3_1 h1 span","Все про преимущества интернет-магазина...")
+				break
+			case 's3_2':
+				typeTo("#s3_2 h1 span","Все про преимущества лендинга...")
+				break
+			case 's4_1':
+				typeTo("#s4_1 h1 span","Пример ленда + отзыв")
+				break
+			case 's5_1':
+				typeTo("#s5_1 h1 span","<i>The End</i>")
 				break
 		}
 
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-		// Обновление текущего id
-		currId = id
-
 		// Обновление меню
 		updateMenu(id)
+
+		// Обновление текущего id
+		currId = id
 
 		// Прятание меню
 		$("#navbar").removeClass("active")
@@ -443,8 +539,6 @@ $("#circ_1").click(function(){
 		console.log("Nav to " + id + "...")
 
 	}
-
-	////
 
 	// Печатание текста
 	function typeTo(el,text){
@@ -481,7 +575,6 @@ $("#circ_1").click(function(){
 
 	//Розничные продажи
 	$("#circ_1").click(function(){
-		typeTo("#s2_1 p:eq(0) > span","Для сферы <u>розничных продаж</u> мы предлагаем следующие варианты...")
 		navTo("s2_1")
 	});
 
@@ -503,8 +596,34 @@ $("#circ_1").click(function(){
 		navTo("s2_4")
 	});
 
+	/* --- Level 3 --- */
+
+	//Розничные продажи - интернет-магазин
+	$("#s2_1 .item:eq(0)").click(function(){
+		navTo("s3_1")
+	})
+
+	//Розничные продажи - лендинг
+	$("#s2_1 .item:eq(1)").click(function(){
+		navTo("s3_2")
+	})
+
+	/* Level 3 */
+	$("#s3_1 button.next, #s3_2 button.next").click(function(){
+		navTo("s4_1")
+	})
+
+	/* Level 4 */
+	$("#s4_1 button").click(function(){
+		navTo("s5_1")
+	})
+
 	// >>>>>>>>>>>>>>>>>>>>>>
 	// >>>>>>>>>>>>>>>>>>>>>>
+
+	$("#s3_1 button, #s3_2 button").click(function(){
+		$(this).toggleClass("checked")
+	})
 
 	//четвертый экран
 	//привыборе между интернет-магазином и лендингом в розничных продажах
