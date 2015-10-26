@@ -662,11 +662,11 @@ h1 {
 /* Services */
 /* классы для анимации сдвига */
 .services .services-list #for_c1_c2  .item{
-transition: 0.8s ease-in-out;
--webkit-transition: 0.8s ease-in-out;
--moz-transition: 0.8s ease-in-out;
--o-transition: 0.8s ease-in-out;
--khtml-transition: 0.8s ease-in-out;
+transition: 0.4s ease-in-out;
+-webkit-transition: 0.4s ease-in-out;
+-moz-transition: 0.4s ease-in-out;
+-o-transition: 0.4s ease-in-out;
+-khtml-transition: 0.4s ease-in-out;
 }
 
 .inleft{
@@ -871,4 +871,64 @@ section .image img {
   max-width: 300px;
   margin: 0 auto;
   box-shadow: 0 0 20px -5px #000;
+}
+
+/*Level 3*/
+#s3_1 button,
+#s3_2 button {
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  border: 2px solid #188F18;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#s3_1 button.next,
+#s3_2 button.next {
+  border: none !important;
+  background: #0D577C !important;
+  padding: 20px;
+}
+#s3_1 button.checked,
+#s3_2 button.checked {
+  background: #188F18;
+}
+#s3_1 button:hover,
+#s3_2 button:hover {
+  border: 2px solid #0EA40E;
+}
+#s3_1 button:active,
+#s3_2 button:active {
+  border: 2px solid #157515;
+}
+
+/*Level 4*/
+#s4_1 button {
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  background: #188F18;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#s4_1 button:hover {
+  background: #0EA40E;
+  border: none;
+}
+#s4_1 button:active {
+  background: #157515;
+  border: none;
 }
